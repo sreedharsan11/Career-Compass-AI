@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}Project Ideas - Career Compass{% endblock %}
+{% block content %}
+<section class="card wide">
+    <h2>Suggested Project Ideas (Role-based)</h2>
+    <p class="subtitle">
+        Use these projects to fill your skill gaps and show evidence on your resume and GitHub.
+        Each project is tagged with a role so you can pick based on your target.
+    </p>
+
+    <div class="grid-3">
+        <div class="home-card">
+            <h3>[Backend] REST Task Manager API</h3>
+            <p>Build an API to manage tasks with users, authentication, and a database.</p>
+            <p class="panel-subtitle">Tech: Python/Flask or Node/Express, SQL</p>
+        </div>
+        <div class="home-card">
+            <h3>[Backend] Job Portal Backend</h3>
+            <p>APIs for jobs, applications, and company details with search and filters.</p>
+            <p class="panel-subtitle">Tech: Django/Flask + DB</p>
+        </div>
+
+        <div class="home-card">
+            <h3>[Frontend] Admin Dashboard</h3>
+            <p>Responsive dashboard with cards, charts, and tables fed from mock APIs.</p>
+            <p class="panel-subtitle">Tech: HTML, CSS, JavaScript, React (optional)</p>
+        </div>
+        <div class="home-card">
+            <h3>[Frontend] Portfolio + Blog</h3>
+            <p>Showcase projects, skills, and blog posts about your learning journey.</p>
+            <p class="panel-subtitle">Tech: React / static site generator</p>
+        </div>
+
+        <div class="home-card">
+            <h3>[Full Stack] Career Compass Clone</h3>
+            <p>Simple version of this app: user accounts, resume storage, and reports.</p>
+            <p class="panel-subtitle">Tech: React + Flask/Django + DB</p>
+        </div>
+        <div class="home-card">
+            <h3>[Full Stack] E-commerce Mini Site</h3>
+            <p>Products, cart, checkout (dummy), and admin product management.</p>
+            <p class="panel-subtitle">Tech: Any full stack framework</p>
+        </div>
+
+        <div class="home-card">
+            <h3>[Data Analyst] Sales Dashboard</h3>
+            <p>Analyze sales data and build interactive charts and KPIs.</p>
+            <p class="panel-subtitle">Tech: Excel/Sheets + Power BI/Tableau + Python</p>
+        </div>
+        <div class="home-card">
+            <h3>[Data Scientist] Churn Prediction</h3>
+            <p>Predict which customers are likely to leave using historical data.</p>
+            <p class="panel-subtitle">Tech: Python, Pandas, sklearn</p>
+        </div>
+
+        <div class="home-card">
+            <h3>[ML Engineer] Model Serving API</h3>
+            <p>Train a simple classifier/regressor and expose it via a REST API.</p>
+            <p class="panel-subtitle">Tech: Flask/FastAPI + ML model</p>
+        </div>
+        <div class="home-card">
+            <h3>[DevOps] CI/CD Pipeline Demo</h3>
+            <p>Automate build, tests, and deployment for a small web app.</p>
+            <p class="panel-subtitle">Tech: GitHub Actions, Docker</p>
+        </div>
+
+        <div class="home-card">
+            <h3>[QA] Test Automation Suite</h3>
+            <p>Write and run automated UI tests for a sample website.</p>
+            <p class="panel-subtitle">Tech: Selenium / Playwright</p>
+        </div>
+        <div class="home-card">
+            <h3>[Cybersecurity] Vulnerability Lab</h3>
+            <p>Set up a small vulnerable app and document how to find/report issues.</p>
+            <p class="panel-subtitle">Tech: Basic web security tools</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

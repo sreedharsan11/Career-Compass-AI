@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Career Compass - Dashboard{% endblock %}
+{% block content %}
+<section class="card wide">
+    <h2>Resume–Job Match Analysis</h2>
+    <p class="subtitle">
+        Paste your resume and job description or upload files. The system will compare them, calculate a match score,
+        and generate Gap Analysis and Actionable Tips directly based on the difference between your resume and this JD.
+    </p>
+
+    <div class="grid-2">
+        <div class="field-block">
+            <label for="resumeText">Resume (paste or upload)</label>
+            <textarea id="resumeText" rows="8" placeholder="Paste your resume content here..."></textarea>
+            <input type="file" id="resumeFile" accept=".pdf,.docx,.txt" />
+            <small class="hint">Supported: PDF, DOCX, TXT | If you upload a file, it will override pasted text.</small>
+        </div>
+
+        <div class="field-block">
+            <label for="jdText">Job Description (paste or upload)</label>
+            <textarea id="jdText" rows="8" placeholder="Paste the job description here..."></textarea>
+            <input type="file" id="jdFile" accept=".pdf,.docx,.txt" />
+            <small class="hint">Paste JD or upload. The system will extract plain text for analysis.</small>
+        </div>
+    </div>
+
+    <div class="actions-row">
+        <button id="analyzeBtn">Analyze Match</button>
+    </div>
+
+    <div id="matchResult" class="result hidden">
+        <div class="score-row">
+            <div class="score-card">
+                <h3>Overall Match Score</h3>
+                <p id="overallScore" class="score-value"></p>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="panel">
+                <h3>Gap Analysis</h3>
+                <p class="panel-subtitle">
+                    Generated directly by comparing your resume skills & tools with this JD.
+                </p>
+                <div id="gapAnalysis" class="panel-body"></div>
+            </div>
+
+            <div class="panel">
+                <h3>Actionable Tips</h3>
+                <p class="panel-subtitle">
+                    Each suggestion is derived from the specific gaps detected above.
+                </p>
+                <ul id="actionTips" class="panel-list"></ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+{% endblock %}

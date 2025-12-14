@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Career Compass - Home{% endblock %}
+{% block content %}
+<section class="card wide hero">
+    <div class="hero-text">
+        <h1>Plan your tech career with clarity.</h1>
+        <p class="subtitle">
+            Analyze your resume, match it with job descriptions, explore roadmaps, and prepare for interviews —
+            all in one professional dashboard.
+        </p>
+        <div class="hero-actions">
+            <a class="pill-btn primary" href="{{ url_for('dashboard') }}">Open Dashboard →</a>
+            <a class="pill-btn ghost" href="{{ url_for('roadmaps') }}">View Role Roadmaps</a>
+        </div>
+    </div>
+    <div class="hero-panel">
+        <h3>What Career Compass offers</h3>
+        <ul class="panel-list">
+            <li>Resume vs Job Description match score & detailed gap analysis</li>
+            <li>Actionable tips generated from the exact gaps in your profile</li>
+            <li>Roadmaps for many popular tech roles</li>
+            <li>Project ideas and interview preparation support</li>
+        </ul>
+    </div>
+</section>
+
+<section class="card wide">
+    <h2>How to use this platform</h2>
+    <div class="grid-3">
+        <div class="home-card">
+            <h3>1. Analyze</h3>
+            <p>Paste or upload your resume & JD in the Dashboard to see your match score and gaps.</p>
+        </div>
+        <div class="home-card">
+            <h3>2. Plan</h3>
+            <p>Use Roadmaps to understand what skills and tools you must learn for each target role.</p>
+        </div>
+        <div class="home-card">
+            <h3>3. Execute</h3>
+            <p>Pick projects and interview questions to fill your gaps and show evidence of your skills.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
